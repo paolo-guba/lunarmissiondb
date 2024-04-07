@@ -4,7 +4,7 @@ from enum import Enum
 
 import pandas as pd
 
-from lunadb import DATA_DIR
+from lunardb import DATA_DIR
 
 
 @dataclass

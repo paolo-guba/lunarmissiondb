@@ -2,7 +2,7 @@ from datetime import datetime, UTC
 
 import pandas as pd
 
-from lunadb.src.gcat_catalog import GCATCatalog, GCATCatalogSelector
+from lunardb.lunardb.gcat_catalog import GCATCatalog, GCATCatalogSelector
 
 
 class GCATDataLoader:
@@ -37,4 +37,3 @@ if __name__ == '__main__':
     satcat = GCATDataLoader.get_satcat()
     auxcat = GCATDataLoader.get_auxcat()
     ftocat = GCATDataLoader.get_ftocat()
-    print()

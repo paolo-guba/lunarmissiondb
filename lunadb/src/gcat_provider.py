@@ -2,8 +2,8 @@ from datetime import datetime
 
 import httpx
 
-from lunadb import DATA_DIR
-from lunadb.src.gcat_catalog import GCATCatalogSelector, GCATCatalog
+from lunardb import DATA_DIR
+from lunardb.lunardb.gcat_catalog import GCATCatalogSelector, GCATCatalog
 
 
 class GCATCatalogProvider:
