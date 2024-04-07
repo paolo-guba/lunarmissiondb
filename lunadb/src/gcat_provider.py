@@ -3,7 +3,7 @@ from datetime import datetime
 import httpx
 
 from lunadb import DATA_DIR
-from lunadb.gcat_catalog import GCATCatalogSelector, GCATCatalog
+from lunadb.src.gcat_catalog import GCATCatalogSelector, GCATCatalog
 
 
 class GCATCatalogProvider:
@@ -22,7 +22,7 @@ class GCATCatalogProvider:
     @classmethod
     def save_catalog_to_file(cls, catalog: GCATCatalog):
         data = cls.download_catalog(catalog)
-        with open(cls.GCAT_DIR / f'{catalog.name}.tsv', 'w') as f:
+        with open(catalog.file_path, 'w') as f:
             f.write(data)
 
     @classmethod
