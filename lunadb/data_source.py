@@ -26,3 +26,8 @@ class DataSource:
     @abstractmethod
     def url(self) -> str:
         pass
+
+    @property
+    @abstractmethod
+    def filepath(self) -> Path:
+        pass

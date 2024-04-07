@@ -8,7 +8,7 @@ class GCATDataLoader(DataLoader):
 
     @classmethod
     def get_dataframe(cls, catalog: GCATCatalog) -> pd.DataFrame:
-        with open(catalog., 'r') as f:
+        with open(catalog._get_filepath(), 'r') as f:
             header = f.readline().strip().split('\t')
             update_timestamp = f.readline().strip()
 
