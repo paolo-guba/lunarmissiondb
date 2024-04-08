@@ -17,7 +17,7 @@ class GCATDataLoader:
         last_update_epoch = last_update_epoch.replace(tzinfo=UTC)
         catalog.last_update_epoch = last_update_epoch
 
-        catalog.dataframe = pd.read_csv(catalog.file_path, sep='\t', skiprows=2, names=header)
+        catalog.dataframe = pd.read_csv(catalog.file_path, sep='\t', skiprows=2, names=header, low_memory=False)
         return catalog
 
     @classmethod
